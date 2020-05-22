@@ -1,0 +1,8 @@
+[
+    {
+        "context": ["/data"],
+        "target": "https://api.openweathermap.org",
+        "changeOrigin": true,
+        "secure": false
+    }
+]

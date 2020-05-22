@@ -1,0 +1,68 @@
+// --- COLORS ---
+$color-orange: #ffab38;
+
+$color-warning: #fdc300;
+$color-success: #28a745;
+$color-error: #c70039;
+$color-info: #17a2b8;
+
+$color-white: #ffffff;
+$color-black: #1e1e1e;
+
+$color-grey--010: #fafafa;
+$color-grey--050: #ebebeb;
+$color-grey--100: #cecece;
+$color-grey--200: #adadad;
+$color-grey--300: #8c8c8c;
+$color-grey--400: #737373;
+$color-grey--500: #5a5a5a;
+$color-grey--600: #525252;
+$color-grey--700: #484848;
+$color-grey--800: #3f3f3f;
+$color-grey--900: #2e2e2e;
+
+// --- FONT WEIGHT ---
+$weight-light: 300;
+$weight-regular: 400;
+$weight-semi-bold: 700;
+$weight-bold: 900;
+
+// --- MEDIA ---
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+@mixin for-tablet-portrait-down {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+@mixin for-tablet-landscape-down {
+    @media (max-width: 899px) {
+        @content;
+    }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+
+// --- Z-INDEX ---
+$z-basic: 100;

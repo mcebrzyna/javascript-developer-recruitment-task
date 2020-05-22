@@ -1,0 +1,33 @@
+<mat-card class="today__card">
+    <mat-card-title-group>
+        <mat-card-title>{{ weather.city.name }}</mat-card-title>
+        <mat-card-subtitle>{{ today.weather[0].main }}</mat-card-subtitle>
+    </mat-card-title-group>
+
+    <mat-card-content class="card__content">
+        <div class="card__temp">
+            <img [src]="imgUrl" alt="weather icon" class="temp__img" />
+
+            <div class="temp__value">
+                <div class="value__num">
+                    {{ today.main.temp | number: "1.0-0" }}
+                </div>
+                <div class="value__symbol">&#8451;</div>
+            </div>
+        </div>
+
+        <div class="card__additives">
+            <div
+                class="additives__add"
+                *ngFor="let add of additives | keyvalue"
+            >
+                <div class="mat-caption add__title">{{ add.key }}</div>
+                <div class="add__value">{{ add.value }}</div>
+            </div>
+        </div>
+
+        <button mat-icon-button (click)="addFavorite()" class="card__favorite">
+            <mat-icon>favorite</mat-icon>
+        </button>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,18 @@
+<div class="forecast__header">
+    <span (click)="backToDashboard()" class="mat-h2 text-with-icon header__btn">
+        <mat-icon>arrow_back</mat-icon>Dashboard
+    </span>
+</div>
+<div *ngIf="exactWeather$ | async as weather; else noData">
+    <app-city-forecast [weather]="weather"></app-city-forecast>
+</div>
+
+<ng-template #noData>
+    <ng-container *ngIf="!isLoaded">
+        <div>Loading city weather...</div>
+    </ng-container>
+
+    <ng-container *ngIf="isLoaded">
+        <div>City not found.</div>
+    </ng-container>
+</ng-template>

@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSearch(box.value)" class="search-bar__form">
+    <button mat-icon-button type="submit" class="form__submit">
+        <mat-icon>search</mat-icon>
+    </button>
+    <input
+        #box
+        placeholder="Weather in the city..."
+        class="form__input"
+        type="text"
+    />
+</form>

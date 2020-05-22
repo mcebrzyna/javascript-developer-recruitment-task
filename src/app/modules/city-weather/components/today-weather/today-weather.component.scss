@@ -1,0 +1,71 @@
+@import "variables";
+
+:host {
+    display: block;
+
+    .today__card {
+        color: $color-white;
+        background-color: $color-orange;
+
+        .card__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card__temp {
+            display: flex;
+            align-items: center;
+
+            .temp__img {
+                width: 7rem;
+                height: 7rem;
+                max-height: 100px;
+                max-width: 100px;
+            }
+
+            .temp__value {
+                display: flex;
+                justify-content: flex-start;
+
+                .value__num {
+                    font-size: 5rem;
+                }
+
+                .value__symbol {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .card__additives {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .additives__add {
+                margin-left: 3rem;
+                text-align: center;
+
+                .add__title {
+                    font-size: 1rem;
+                    padding-bottom: 0.5rem;
+                }
+
+                .add__value {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .card__favorite {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 3rem;
+            width: 3rem;
+            height: 3rem;
+            cursor: pointer;
+        }
+    }
+}

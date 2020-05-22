@@ -1,0 +1,17 @@
+<h2 class="mat-h2 text-with-icon">
+    <mat-icon>favorite</mat-icon>
+    Cities you follow:
+</h2>
+<section class="dashboard__cards">
+    <ng-container *ngIf="favorites$ | async as favorites; else noData">
+        <app-city-card
+            *ngFor="let card of favorites"
+            [card]="card"
+            class="cards__card"
+        ></app-city-card>
+    </ng-container>
+
+    <ng-template #noData>
+        <app-city-card-empty></app-city-card-empty>
+    </ng-template>
+</section>

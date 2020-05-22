@@ -1,0 +1,16 @@
+:host {
+    display: block;
+    width: 100%;
+    padding-top: 2rem;
+
+    .forecast__header {
+        padding-bottom: 2rem;
+
+        .header__btn {
+            cursor: pointer;
+            font: 500 1.25rem/2rem, "Helvetica Neue", sans-serif;
+            letter-spacing: normal;
+            margin: 0 0 1rem;
+        }
+    }
+}

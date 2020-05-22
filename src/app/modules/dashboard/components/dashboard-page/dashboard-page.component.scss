@@ -1,0 +1,14 @@
+:host {
+    display: block;
+    padding-top: 2rem;
+
+    .dashboard__cards {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 2rem;
+
+        .cards__card:nth-of-type(4n) {
+            margin: 0 0 4% 0;
+        }
+    }
+}

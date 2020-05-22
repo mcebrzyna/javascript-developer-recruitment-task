@@ -1,0 +1,25 @@
+<mat-card (click)="openForecast()" class="city__card">
+    <div class="card__ratio">
+        <mat-card-title>{{ card.name }}</mat-card-title>
+        <mat-card-subtitle>{{ card.weather[0].main }}</mat-card-subtitle>
+        <mat-card-content class="card__content">
+            <div class="card__temp">
+                <img [src]="imgUrl" alt="weather icon" class="temp__img" />
+
+                <div class="temp__value">
+                    <div class="value__num">
+                        {{ card.main.temp | number: "1.0-0" }}
+                    </div>
+                    <div class="value__symbol">&#8451;</div>
+                </div>
+            </div>
+        </mat-card-content>
+        <button
+            mat-icon-button
+            (click)="removeCard($event)"
+            class="card__remove"
+        >
+            <mat-icon>clear</mat-icon>
+        </button>
+    </div>
+</mat-card>

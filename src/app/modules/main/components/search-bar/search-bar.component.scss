@@ -1,0 +1,41 @@
+@import "variables";
+
+:host {
+    display: block;
+    border: 2px solid black;
+    border-radius: 0.25rem;
+    transition: box-shadow 300ms ease-out;
+    height: 2.5rem;
+    width: 40%;
+
+    &:hover {
+        box-shadow: inset 0 0 0 1px black;
+    }
+
+    .search-bar__form {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 0 1rem 0 0.2rem;
+
+        .form__input {
+            letter-spacing: 0.1px;
+            opacity: 1;
+            border: none;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            background-color: transparent;
+
+            &::placeholder {
+                letter-spacing: 0.1px;
+                opacity: 1;
+            }
+        }
+
+        .form__submit {
+            margin-right: 0.5rem;
+        }
+    }
+}
